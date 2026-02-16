@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import cors from 'cors';
 import JokeController from "../../controllers/JokeController.mjs";
 import swaggerUi from "swagger-ui-express";
 import swaggerDocument from './swagger.json' with { type: 'json' };
@@ -18,7 +19,8 @@ jokeRouter.get('/show/:id', (req, res) => {
     jokeController.show(req, res);
 })
 
-jokeRouter.get('/random', (req, res) => {
+// Adds headers: Access-Control-Allow-Origin: *
+jokeRouter.get('/random', cors(), (req, res) => {
     jokeController.random(req, res);
 })
 
