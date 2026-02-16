@@ -26,7 +26,17 @@
                 "properties": {
                   "joke": {
                     "type": "object",
-                    "description": "Joke content as JSON object"
+                    "description": "Joke content as JSON object",
+                    "properties": {
+                      "question": {
+                        "type": "string",
+                        "description": "Joke setup"
+                      },
+                      "response": {
+                        "type": "string",
+                        "description": "Joke punchline"
+                      }
+                    }
                   }
                 },
                 "required": true
