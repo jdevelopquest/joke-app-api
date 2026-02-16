@@ -1,0 +1,11 @@
+{
+  "name": "joke-app-api",
+  "version": "1.0.0",
+  "description": "Practice API for a joke app",
+  "dependencies": {
+    "express": "^5.2.1",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
