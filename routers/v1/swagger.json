@@ -55,6 +55,16 @@
               }
             }
           },
+          "400": {
+            "description": "Invalid request: expected a \"joke\" object containing exactly \"question\" and \"response\" (strings), with no additional fields.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorMessage"
+                }
+              }
+            }
+          },
           "500": {
             "description": "Error creating joke",
             "content": {
