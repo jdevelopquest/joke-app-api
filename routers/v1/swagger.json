@@ -139,6 +139,16 @@
               }
             }
           },
+          "400": {
+            "description": "Joke ID is required and must be a number",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorMessage"
+                }
+              }
+            }
+          },
           "404": {
             "description": "Joke not found",
             "content": {
