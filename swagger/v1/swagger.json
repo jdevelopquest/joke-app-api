@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "/api/v1/jokes"
+      "url": "/v1/jokes"
     }
   ],
   "paths": {
@@ -24,19 +24,13 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "joke": {
-                    "type": "object",
-                    "description": "Joke content as JSON object",
-                    "properties": {
-                      "question": {
-                        "type": "string",
-                        "description": "Joke setup"
-                      },
-                      "response": {
-                        "type": "string",
-                        "description": "Joke punchline"
-                      }
-                    }
+                  "premise": {
+                    "type": "string",
+                    "description": "Joke setup"
+                  },
+                  "punchline": {
+                    "type": "string",
+                    "description": "Joke punchline"
                   }
                 },
                 "required": true
@@ -56,7 +50,7 @@
             }
           },
           "400": {
-            "description": "Invalid request: expected a \"joke\" object containing exactly \"question\" and \"response\" (strings), with no additional fields.",
+            "description": "Invalid request body, joke premise and punchline are required and must be strings",
             "content": {
               "application/json": {
                 "schema": {
@@ -212,21 +206,13 @@
             "type": "integer",
             "description": "Joke ID"
           },
-          "joke": {
-            "type": "object",
-            "description": "Joke content as JSON object",
-            "properties": {
-              "question": {
-                "type": "string",
-                "description": "Joke setup",
-                "example": "Why did the chicken cross the road?"
-              },
-              "response": {
-                "type": "string",
-                "description": "Joke punchline",
-                "example": "Because he wasn't hungry."
-              }
-            }
+          "premise": {
+            "type": "string",
+            "description": "Joke setup"
+          },
+          "punchline": {
+            "type": "string",
+            "description": "Joke punchline"
           },
           "createdAt": {
             "type": "string",
