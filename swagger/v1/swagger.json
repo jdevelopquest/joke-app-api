@@ -44,13 +44,13 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SuccessMessage"
+                  "$ref": "#/components/schemas/Joke"
                 }
               }
             }
           },
           "400": {
-            "description": "Invalid request body, joke premise and punchline are required and must be strings",
+            "description": "Invalid request JSON body, joke premise and punchline are required and must be strings",
             "content": {
               "application/json": {
                 "schema": {
