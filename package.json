@@ -2,11 +2,17 @@
   "name": "joke-app-api",
   "version": "1.0.0",
   "description": "Practice API for a joke app",
+  "scripts": {
+    "app": "node app.mjs"
+  },
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "sequelize": "^6.37.7",
     "sqlite3": "^5.1.7",
     "swagger-ui-express": "^5.0.1"
+  },
+  "engines": {
+    "node": "v22.22.0"
   }
 }

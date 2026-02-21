@@ -10,10 +10,14 @@ class Jokes extends Model {
 
 Jokes.init(
     {
-        joke: {
-            type: DataTypes.JSON,
+        premise: {
+            type: DataTypes.TEXT,
             allowNull: false,
         },
+        punchline: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+        }
     },
     {
         sequelize,
