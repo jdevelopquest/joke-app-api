@@ -50,7 +50,7 @@
             }
           },
           "400": {
-            "description": "Invalid request JSON body, joke premise and punchline are required and must be strings",
+            "description": "Content-Type must be application/json, joke premise and punchline are required and must be strings at least one character long",
             "content": {
               "application/json": {
                 "schema": {
