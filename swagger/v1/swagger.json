@@ -50,7 +50,17 @@
             }
           },
           "400": {
-            "description": "Content-Type must be application/json, joke premise and punchline are required and must be strings at least one character long",
+            "description": "Joke premise and punchline are required and must be strings at least one character long",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorMessage"
+                }
+              }
+            }
+          },
+          "415": {
+            "description": "Content-Type must be application/json",
             "content": {
               "application/json": {
                 "schema": {
@@ -134,7 +144,7 @@
             }
           },
           "400": {
-            "description": "Joke ID is required and must be a number",
+            "description": "Joke ID is required and must be a integer number",
             "content": {
               "application/json": {
                 "schema": {

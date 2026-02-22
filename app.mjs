@@ -1,5 +1,5 @@
 import express from 'express';
-import jokeRouter from './routers/jokes/v1/jokes.router.mjs';
+import jokeRouter from './routers/jokes/v1/jokesRouter.mjs';
 
 const app = express();
 const port = process.env.PORT || 3000;
